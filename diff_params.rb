@@ -6,7 +6,6 @@ class DiffParams
   def initialize(params_list1, params_list2)
     @params_list1 = params_list1
     @params_list2 = params_list2
-    # @diff = { name: @params2[:name], :methods=> [] }
     @diff_params = []
 
     compare_params_lists
