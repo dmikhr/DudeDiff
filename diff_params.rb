@@ -25,8 +25,9 @@ class DiffParams
       @diff = { name: params_name, :methods=> [] }
       @params1 = find_item(@params_list1, params_name)
       @params2 = find_item(@params_list2, params_name)
-      # byebug
+
       compare
+
       @diff[:name] = [@diff[:name], 0]
       @diff_params << @diff
     end
