@@ -12,7 +12,7 @@ class TestUtils < Test::Unit::TestCase
       :methods=> [{ name: :initialize, args: 2, length: 1, conditions: 1 }]}]
 
     compare_methods = DiffParams.new(params1, params2).diff_params
-    # byebug
+
     method = compare_methods.first[:methods].first
     assert_equal(method[:args], [2, 1])
     assert_equal(method[:length], [1, -2])
@@ -71,7 +71,7 @@ class TestUtils < Test::Unit::TestCase
       :methods=> [{ name: :initialize, args: 2, length: 5, conditions: 1 }]}]
 
     compare_params = DiffParams.new(params1, params2).diff_params
-    # byebug
+
     params = compare_params.first.first
     assert_equal(params[:name], ["NewCollection", 1])
   end
